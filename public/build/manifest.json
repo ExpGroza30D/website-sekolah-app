@@ -1,0 +1,18 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-ce80cac5.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-ce80cac5.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "css": [
+      "assets/app-ce80cac5.css"
+    ],
+    "file": "assets/app-30e60fb0.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
