@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Filament\Panel;
 use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel as FilamentPanel;
 
 class User extends Authenticatable implements FilamentUser
 {
@@ -28,9 +28,9 @@ class User extends Authenticatable implements FilamentUser
         'email_verified_at' => 'datetime',
     ];
 
-    public function canAccessPanel(Panel $panel): bool
+    public function canAccessPanel(FilamentPanel $panel): bool
     {
-        return true; // Atau sesuaikan dengan logic Anda
-        // return $this->email === 'admin@example.com';
+        return true; 
+        
     }
 }
