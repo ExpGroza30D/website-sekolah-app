@@ -1,6 +1,6 @@
 <?php
 
-use Filament\Facades\Filament;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\BlogController;
