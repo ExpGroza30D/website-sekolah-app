@@ -1,65 +1,63 @@
 {
     "version": 2,
     "functions": {
-        "api/index.php": { 
-            "runtime": "vercel-php@0.6.0",
-            "memory": 1024,
-            "maxDuration": 10
-        }
+      "api/index.php": { 
+        "runtime": "vercel-php@0.6.0",
+        "memory": 1024,
+        "maxDuration": 10
+      }
     },
     "routes": [
-        {
-            "src": "/build/(.*)",
-            "dest": "/public/build/$1"
-        },
-        {
-            "src": "/assets/(.*)",
-            "dest": "/public/assets/$1"
-        },
-        {
-            "src": "/admin/(.*)",
-            "dest": "/public/index.php"  // Mengarah ke index.php untuk Filament dan admin
-        },
-        {
-            "src": "/filament/(.*)",
-            "dest": "/public/index.php"  // Mengarah ke index.php untuk Filament
-        },
-        {
-            "src": "/(css|js|images|fonts)/(.*)",
-            "dest": "/public/$1/$2"
-        },
-        {
-            "src": "/(favicon\\.ico|robots\\.txt|sitemap\\.xml)",
-            "dest": "/public/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/public/index.php"  // Mengarah ke index.php untuk rute lainnya
-        }
+      {
+        "src": "/build/(.*)",
+        "dest": "/public/build/$1"
+      },
+      {
+        "src": "/assets/(.*)",
+        "dest": "/public/assets/$1"
+      },
+      {
+        "src": "/admin/(.*)",
+        "dest": "/public/index.php"
+      },
+      {
+        "src": "/filament/(.*)",
+        "dest": "/public/index.php"
+      },
+      {
+        "src": "/(css|js|images|fonts)/(.*)",
+        "dest": "/public/$1/$2"
+      },
+      {
+        "src": "/(favicon\\.ico|robots\\.txt|sitemap\\.xml)",
+        "dest": "/public/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/public/index.php"
+      }
     ],
     "env": {
-        "APP_ENV": "production",
-        "APP_DEBUG": "false",
-        "APP_URL": "https://website-sekolah-erwh1l6cc-expgrozas-projects.vercel.app",
-        
-        "APP_CONFIG_CACHE": "/tmp/config.php",
-        "APP_EVENTS_CACHE": "/tmp/events.php",
-        "APP_PACKAGES_CACHE": "/tmp/packages.php",
-        "APP_ROUTES_CACHE": "/tmp/routes.php",
-        "APP_SERVICES_CACHE": "/tmp/services.php",
-        "VIEW_COMPILED_PATH": "/tmp",
-
-        "CACHE_DRIVER": "array",
-        "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie",
-        "SESSION_LIFETIME": "120",
-        "LOG_LEVEL": "debug",
-        
-        "FILAMENT_PATH": "admin"
+      "APP_ENV": "production",
+      "APP_DEBUG": "false",
+      "APP_URL": "https://website-sekolah-erwh1l6cc-expgrozas-projects.vercel.app",
+      "APP_CONFIG_CACHE": "/tmp/config.php",
+      "APP_EVENTS_CACHE": "/tmp/events.php",
+      "APP_PACKAGES_CACHE": "/tmp/packages.php",
+      "APP_ROUTES_CACHE": "/tmp/routes.php",
+      "APP_SERVICES_CACHE": "/tmp/services.php",
+      "VIEW_COMPILED_PATH": "/tmp",
+      "CACHE_DRIVER": "array",
+      "LOG_CHANNEL": "stderr",
+      "SESSION_DRIVER": "cookie",
+      "SESSION_LIFETIME": "120",
+      "LOG_LEVEL": "debug",
+      "FILAMENT_PATH": "admin"
     },
     "build": {
-        "env": {
-            "PHP_VERSION": "8.1"
-        }
+      "env": {
+        "PHP_VERSION": "8.1"
+      }
     }
-}
+  }
+  
