@@ -44,5 +44,5 @@ Route::get('/contact', function() {
 })->name('contact');
 
 Route::get('/admin', function () {
-    return redirect(route('filament.admin.pages.dashboard'));
+    return redirect(route('filament.admin.auth.login'));
 })->name('admin.redirect');
