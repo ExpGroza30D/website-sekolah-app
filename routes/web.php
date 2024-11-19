@@ -1,8 +1,9 @@
 <?php
 
+use Filament\Facades\Filament;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\BlogController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 
 Route::get('/', function () {
@@ -41,3 +42,7 @@ Route::get('/achievements', function() {
 Route::get('/contact', function() {
     return view('pages.contact');
 })->name('contact');
+
+Route::get('/admin', function () {
+    return redirect(route('filament.admin.pages.dashboard'));
+})->name('admin.redirect');

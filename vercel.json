@@ -18,6 +18,10 @@
             "dest": "/public/assets/$1"
         },
         {
+            "src": "/admin/(.*)",
+            "dest": "/api/index.php"
+        },
+        {
             "src": "/filament/(.*)",
             "dest": "/public/filament/$1"
         },
@@ -36,7 +40,7 @@
     ],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
+        "APP_DEBUG": "false",
         "APP_URL": "https://website-sekolah-erwh1l6cc-expgrozas-projects.vercel.app",
         
         "APP_CONFIG_CACHE": "/tmp/config.php",
@@ -52,8 +56,7 @@
         "SESSION_LIFETIME": "120",
         "LOG_LEVEL": "debug",
         
-        "FILAMENT_PATH": "admin",
-        "FILAMENT_DOMAIN": "https://website-sekolah-erwh1l6cc-expgrozas-projects.vercel.app"
+        "FILAMENT_PATH": "admin"
     },
     "build": {
         "env": {
