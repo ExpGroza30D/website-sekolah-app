@@ -13,6 +13,6 @@ class EnsureUserIsAdmin
             return $next($request);
         }
 
-        abort(403, 'Anda tidak memiliki akses ke halaman ini.');
+        abort(403, 'Akses ditolak.');
     }
 }
