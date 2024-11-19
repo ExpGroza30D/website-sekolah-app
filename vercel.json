@@ -2,7 +2,7 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": { 
+        "api/index.php": {
             "runtime": "vercel-php@0.6.0",
             "memory": 1024,
             "maxDuration": 10
@@ -16,6 +16,10 @@
         {
             "src": "/assets/(.*)",
             "dest": "/public/assets/$1"
+        },
+        {
+            "src": "/admin/(.*)",  
+            "dest": "/api/index.php"
         },
         {
             "src": "/filament/(.*)",
@@ -53,7 +57,7 @@
         "LOG_LEVEL": "debug",
         
         "FILAMENT_PATH": "admin",
-        "FILAMENT_DOMAIN": "https://website-sekolah-erwh1l6cc-expgrozas-projects.vercel.app"
+        "FILAMENT_DOMAIN": null 
     },
     "build": {
         "env": {
