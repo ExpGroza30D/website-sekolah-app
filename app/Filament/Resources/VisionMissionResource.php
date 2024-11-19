@@ -24,11 +24,11 @@ class VisionMissionResource extends Resource
             ->schema([
                 Forms\Components\Section::make('Vision Section')
                     ->schema([
-                        Forms\Components\FileUpload::make('vision_image')
-                            ->image()
-                            ->imageEditor()
-                            ->directory('vision-images')
-                            ->columnSpanFull(),
+                        // Mengubah FileUpload menjadi TextInput untuk URL gambar
+                        Forms\Components\TextInput::make('vision_image')
+                            ->url() // Menyatakan bahwa ini adalah URL gambar
+                            ->maxLength(255) // Menentukan panjang maksimal URL
+                            ->nullable(), // Tidak wajib diisi
                         Forms\Components\TextInput::make('vision_title')
                             ->required()
                             ->maxLength(255),
@@ -38,11 +38,11 @@ class VisionMissionResource extends Resource
                     ]),
                 Forms\Components\Section::make('Mission Section')
                     ->schema([
-                        Forms\Components\FileUpload::make('mission_image')
-                            ->image()
-                            ->imageEditor()
-                            ->directory('mission-images')
-                            ->columnSpanFull(),
+                        // Mengubah FileUpload menjadi TextInput untuk URL gambar
+                        Forms\Components\TextInput::make('mission_image')
+                            ->url() // Menyatakan bahwa ini adalah URL gambar
+                            ->maxLength(255) // Menentukan panjang maksimal URL
+                            ->nullable(), // Tidak wajib diisi
                         Forms\Components\TextInput::make('mission_title')
                             ->required()
                             ->maxLength(255),
@@ -59,10 +59,10 @@ class VisionMissionResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('vision_image'),
+                Tables\Columns\ImageColumn::make('vision_image'), // Masih menggunakan ImageColumn untuk menampilkan gambar
                 Tables\Columns\TextColumn::make('vision_title')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('mission_image'),
+                Tables\Columns\ImageColumn::make('mission_image'), // Masih menggunakan ImageColumn untuk menampilkan gambar
                 Tables\Columns\TextColumn::make('mission_title')
                     ->searchable(),
                 Tables\Columns\IconColumn::make('is_active')

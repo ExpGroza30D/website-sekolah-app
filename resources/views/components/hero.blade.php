@@ -12,7 +12,7 @@
             src="{{ $heroSection && $heroSection->background_image ? asset('storage/' . $heroSection->background_image) : 'https://i.pinimg.com/736x/0c/74/6d/0c746d3f3fb905c5920cce6c69f63499.jpg' }}" 
             width="1200" 
             height="700" 
-            onerror="this.src='https://images.unsplash.com/photo-1581092795360-fd1ca04f0952'"
+            onerror="this.src='https://i.pinimg.com/736x/0c/74/6d/0c746d3f3fb905c5920cce6c69f63499.jpg'"
         >
 
         <!-- Overlay Gradient -->

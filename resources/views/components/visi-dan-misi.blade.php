@@ -61,7 +61,7 @@
                             :src="items[currentIndex].imgSrc" 
                             class="w-full h-[300px] md:h-[500px] object-cover transform transition-all duration-700 group-hover:scale-110"
                             alt="Education Vision"
-                            onerror="this.src='https://placehold.co/600x400'"
+                            onerror="this.src='https://i.pinimg.com/736x/a6/f1/ed/a6f1ed77e5f666c4ef0b6901a5cef52a.jpg'"
                         />
                         <!-- Gradient Overlay - Always visible on mobile -->
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 lg:opacity-70"></div>

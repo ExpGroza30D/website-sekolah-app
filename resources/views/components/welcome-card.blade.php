@@ -8,7 +8,7 @@
         <div class="relative group">
             <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full opacity-50 group-hover:opacity-100 blur transition duration-300"></div>
             <div class="relative">
-                <img src="{{ $headmaster && $headmaster->image ? asset('storage/' . $headmaster->image) : 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952' }}" alt="{{ $headmaster?->name ?? 'Kepala Sekolah' }}"  class="rounded-full w-28 h-28 md:w-32 md:h-32 object-cover border-4 border-blue-100 transform group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1581092795360-fd1ca04f0952'">
+                <img src="{{ $headmaster && $headmaster->image ? asset('storage/' . $headmaster->image) : 'https://i.pinimg.com/736x/64/55/c6/6455c63c5ca30010b5b06cc62adaf83a.jpg' }}" alt="{{ $headmaster?->name ?? 'Kepala Sekolah' }}"  class="rounded-full w-28 h-28 md:w-32 md:h-32 object-cover border-4 border-blue-100 transform group-hover:scale-105 transition duration-300" onerror="this.src='https://i.pinimg.com/736x/64/55/c6/6455c63c5ca30010b5b06cc62adaf83a.jpg'">
             </div>
         </div>
 

@@ -24,11 +24,11 @@ class HeroSectionResource extends Resource
             ->schema([
                 Forms\Components\Section::make('Hero Content')
                     ->schema([
-                        Forms\Components\FileUpload::make('background_image')
-                            ->image()
-                            ->disk('public')
-                            ->directory('hero-backgrounds')
-                            ->required(),
+                        // Mengubah FileUpload menjadi TextInput untuk URL gambar
+                        Forms\Components\TextInput::make('background_image')
+                            ->url() // Menyatakan bahwa ini adalah URL
+                            ->maxLength(255) // Menentukan panjang maksimal URL
+                            ->nullable(), // Tidak wajib diisi
                         Forms\Components\TextInput::make('title')
                             ->required()
                             ->maxLength(255),

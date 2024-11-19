@@ -35,6 +35,10 @@
                 { id: 'ekstrakurikuler', label: 'Ekstrakurikuler', icon: '⚽' }
             ],
             items: @js($galleries),
+            defaultImage: 'https://i.pinimg.com/736x/5f/93/73/5f9373cc2e4f4e219612ed4426923116.jpg',
+            getImageUrl(imagePath) {
+                return imagePath ? '/storage/' + imagePath : this.defaultImage;
+            },
             shareItem(url) {
                 if (navigator.share) {
                     navigator.share({

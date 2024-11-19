@@ -24,11 +24,11 @@ class TeacherResource extends Resource
             ->schema([
                 Forms\Components\Section::make('Teacher Information')
                     ->schema([
-                        Forms\Components\FileUpload::make('image')
-                            ->image()
-                            ->directory('teachers')
-                            ->imageEditor()
-                            ->columnSpanFull(),
+                        // Mengubah FileUpload menjadi TextInput untuk URL gambar
+                        Forms\Components\TextInput::make('image')
+                            ->url() // Menyatakan bahwa ini adalah URL gambar
+                            ->maxLength(255) // Menentukan panjang maksimal URL
+                            ->nullable(), // Tidak wajib diisi
                         Forms\Components\TextInput::make('name')
                             ->required()
                             ->maxLength(255),
@@ -59,7 +59,7 @@ class TeacherResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image')
+                Tables\Columns\ImageColumn::make('image') // Masih menggunakan ImageColumn untuk menampilkan gambar
                     ->square(),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
@@ -70,8 +70,8 @@ class TeacherResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
-            ->filters([
-                //
+            ->filters([ 
+                // Filter kosong, bisa ditambahkan jika perlu
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -87,7 +87,7 @@ class TeacherResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            // Relations jika ada
         ];
     }
 

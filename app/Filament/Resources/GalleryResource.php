@@ -24,10 +24,11 @@ class GalleryResource extends Resource
             ->schema([
                 Forms\Components\Section::make('Gallery Item')
                     ->schema([
-                        Forms\Components\FileUpload::make('image')
-                            ->image()
-                            ->required()
-                            ->directory('gallery-images'),
+                        // Mengubah FileUpload menjadi TextInput untuk URL gambar
+                        Forms\Components\TextInput::make('image')
+                            ->url() // Menyatakan bahwa ini adalah URL
+                            ->maxLength(255) // Menentukan panjang maksimal URL
+                            ->nullable(), // Tidak wajib diisi
                         Forms\Components\TextInput::make('title')
                             ->required()
                             ->maxLength(255),
@@ -51,7 +52,7 @@ class GalleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image'), // Masih menggunakan ImageColumn untuk menampilkan gambar
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('category'),

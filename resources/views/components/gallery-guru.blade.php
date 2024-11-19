@@ -12,7 +12,7 @@
                 'id' => $teacher->id,
                 'name' => $teacher->name,
                 'title' => $teacher->title,
-                'imgSrc' => $teacher->image ? asset('storage/' . $teacher->image) : 'https://placehold.co/400x500',
+                'imgSrc' => $teacher->image ? asset('storage/' . $teacher->image) : 'https://i.pinimg.com/736x/58/35/e7/5835e7271bf39b2dd6e380fa48d4e597.jpg',
                 'description' => $teacher->description,
                 'facebook_url' => $teacher->facebook_url,
                 'twitter_url' => $teacher->twitter_url,

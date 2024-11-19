@@ -30,11 +30,11 @@
                     </p>
                     <p class="flex items-center gap-2">
                         <i class="fas fa-map-marker-alt text-blue-400"></i>
-                        Jl. ----------
+                        Jl. Slamet Riyadi Kb. Manggis, Matraman, Kota Jakarta Timur
                     </p>
                     <p class="flex items-center gap-2">
                         <i class="fas fa-phone text-blue-400"></i>
-                        (122) 11111
+                        (021) 8580342
                     </p>
                 </address>
             </div>
