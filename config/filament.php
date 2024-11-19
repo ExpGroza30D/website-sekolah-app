@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'path' => 'https://website-sekolah-hycdkdn7a-expgrozas-projects.vercel.app/admin', // Sesuaikan dengan URL admin yang diakses
+    'path' => env('FILAMENT_PATH', 'admin'),// Sesuaikan dengan URL admin yang diakses
 
 
     /*
@@ -26,16 +26,16 @@ return [
     |
     */
 
-'middleware' => [
-    'auth' => [
-        \Illuminate\Auth\Middleware\Authenticate::class, // Middleware untuk autentikasi
-        \App\Http\Middleware\EnsureUserIsAdmin::class,   // Pastikan hanya admin yang bisa akses
-    ],
-    'base' => [
-        \Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class,
-        \Illuminate\Routing\Middleware\SubstituteBindings::class,
-    ],
-],
+        'middleware' => [
+            'auth' => [
+                \Illuminate\Auth\Middleware\Authenticate::class,
+            ],
+            'base' => [
+                \Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class,
+                \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            ],
+        ],
+
 
 
 

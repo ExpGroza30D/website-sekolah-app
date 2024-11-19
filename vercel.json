@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "framework": null,
     "functions": {
         "api/index.php": { 
             "runtime": "vercel-php@0.6.0",
@@ -19,11 +18,11 @@
         },
         {
             "src": "/admin/(.*)",
-            "dest": "/api/index.php"
+            "dest": "/public/index.php"  // Mengarah ke index.php untuk Filament dan admin
         },
         {
             "src": "/filament/(.*)",
-            "dest": "/api/index.php"
+            "dest": "/public/index.php"  // Mengarah ke index.php untuk Filament
         },
         {
             "src": "/(css|js|images|fonts)/(.*)",
@@ -35,7 +34,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "/api/index.php"
+            "dest": "/public/index.php"  // Mengarah ke index.php untuk rute lainnya
         }
     ],
     "env": {
