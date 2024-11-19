@@ -23,7 +23,7 @@
         },
         {
             "src": "/filament/(.*)",
-            "dest": "/public/filament/$1"
+            "dest": "/api/index.php"
         },
         {
             "src": "/(css|js|images|fonts)/(.*)",
